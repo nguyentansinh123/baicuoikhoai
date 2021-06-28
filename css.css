@@ -1,0 +1,502 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 2000px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: #5D4954;
+    font-family: 'Poppins', sans-serif;
+}
+.logos{
+    color: rgb(255, 238, 238);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 53%;
+    font-size: 12px ;
+}
+
+.nav-links a{
+    color: rgb(255, 238, 238);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.space div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 238, 238);
+    margin: 5px;
+}
+
+.space {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5D4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .space{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0 ;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1 ;
+        transform: translateX(0px);
+    }
+}
+
+.quote{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+#logo1{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 1px 1px 0 0 rgba(15, 28, 63, 0.125);
+}
+
+
+
+h2{
+    display: inline-block;
+    position: absolute;
+    top: 935px;
+    
+}
+.service{
+    margin-left: 60px;
+    position: absolute;
+    top: 960px;
+}
+
+#logo2{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 1px 1px 0 0 rgba(15, 28, 63, 0.125);
+    position: absolute;
+    left: 400px;
+    top: 935px ;
+}
+#phucvu1{
+    position: absolute;
+    left: 450px ;
+}
+#phucvu3{
+    position: absolute;
+    left: 458px;
+    top: 960px;
+}
+#logo3{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 1px 1px 0 0 rgba(15, 28, 63, 0.125);
+    position: absolute;
+    left: 690px;
+    top: 935px;
+}
+#phucvu4{
+    position: absolute;
+    left: 750px;
+}
+#phucvu5{
+    position: absolute;
+    left: 765px;
+    top: 960px;
+}
+#logo4{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 1px 1px 0 0 rgba(15, 28, 63, 0.125);
+    position: absolute;
+    left: 960px;
+    top: 935px;
+}
+#phucvu6{
+    position: absolute;
+    top: 935px;
+    left: 1015px;
+}
+#phucvu7{
+    position: absolute;
+    top: 960px;
+    left: 1020px;
+}
+#line{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    border-radius: 70%;
+    background-color: rgb(209, 209, 209);
+    height: 50px;
+}
+
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+::selection{
+    color: #fff;
+    background: #11101d;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+.sidebar.active{
+    width: 240px
+}
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+.logo_content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    top: 6px;
+    left: 50%;
+    font-size: 22px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    margin: 5px 0;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 125px;
+    top: 0;
+    transform: translate(-50% , -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 120px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5 ease;
+}
+.sidebar ul li .bx-search:hover{
+    background: #fff;
+    color: #1d1b31;
+}
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+.sidebar ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+.sidebar ul li i{
+    font-size: 18px;
+    font-weight: 400;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .links_name{
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.sidebar.active .links_name{
+    transition: 0s;
+    opacity: 1;
+    pointer-events: auto
+}
+
+.rate {
+    padding: none;
+}
+hr{
+    margin-left: 175px;
+}
+
+.feature{
+    position: absolute;
+    left: 96px;
+    top: 930px;
+    font-size: 30px;
+    
+}
+.product_container{
+    margin-left: 100px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto  auto  auto  auto  auto;
+}
+.product{
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #cccccc;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.product img {
+    height: 200px;
+    width: 300px;
+    border-radius: 15%;
+    transition: transform .2s;
+
+    
+}
+
+.product img:hover{
+    transform: scale(1.5); 
+}
+
+
+.mybtn{
+    width: 300px;
+    height: 60px;
+    border: none;
+    color: white;
+    background-color: rgb(112, 162, 228);
+    border-radius: 16px 14px;
+    box-shadow:inset 0 0 0 0 rgb(240, 57, 57) ;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+
+}
+.mybtn:hover{
+    box-shadow: inset 300px 0 0 0 rgb(240, 57, 57)  ;
+}
+
+.product-name{
+    display: inline-block;
+    font-size: 20px;
+}
+.product-price{
+    font-size: 20px;
+}
+.rate{
+    display: inline-block;
+}
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+		#select{
+			width: 60%;
+			height: 580px;
+			padding: 5%;
+			background: #222;
+			position: absolute;
+			top: -1000px;
+			left: 20%;
+			transition: 0.5s;
+			overflow-y: auto;
+			margin: auto;
+		}
+		#select.display{
+			top: 10px;
+            background-color: turquoise;
+            background-image: url('dola.jpg');
+		}
+	
+        .pagination ul{
+            margin-left: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+        }
+        .pagination ul li{
+            color: #20B2AA;
+            list-style: none;
+            line-height: 45px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+        .pagination ul li.numb{
+            list-style: none;
+            height: 45px;
+            width: 45px;
+            margin: 0 3px;
+            line-height: 45px;
+            border-radius: 50%;
+        }
+        .pagination ul li.numb.first{
+            margin: 0px 3px 0 -5px;
+        }
+        .pagination ul li.numb.last{
+            margin: 0px -5px 0 3px;
+        }
+        .pagination ul li.dots{
+            font-size: 22px;
+            cursor: default;
+        }
+        .pagination ul li.btn{
+            padding: 0 20px;
+            border-radius: 50px;
+        }
+        .pagination li.active,
+        .pagination ul li.numb:hover,
+        .pagination ul li:first-child:hover,
+        .pagination ul li:last-child:hover{
+            color: #fff;
+            background-color: rgb(112, 162, 228);
+} 
+.introduce{
+    margin-left: 100px;
+    margin-top: 70px;
+}
+.main-introduce{
+    font-size: larger;
+}
